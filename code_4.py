@@ -21,7 +21,7 @@ def get_the_cheapest_big_mac_price_by_year(year):
     arg_df = df.query(query_str)
     min_df_idx =  arg_df['dollar_price'].idxmin()
     min_item = arg_df.loc[min_df_idx]
-    return f"{min_item['name']}({min_item['iso_a3']}): ${round(min_item['dollar_price'],1)}"
+    return f"{min_item['name']}({min_item['iso_a3']}): ${round(min_item['dollar_price'],2)}"
     pass # Remove this line and code your function
 
 def get_the_most_expensive_big_mac_price_by_year(year):
@@ -29,7 +29,7 @@ def get_the_most_expensive_big_mac_price_by_year(year):
     arg_df = df.query(query_str)
     max_df_idx =  arg_df['dollar_price'].idxmax()
     max_item = arg_df.loc[max_df_idx]
-    return f"{max_item['name']}({max_item['iso_a3']}): ${round(max_item['dollar_price'],1)}"
+    return f"{max_item['name']}({max_item['iso_a3']}): ${round(max_item['dollar_price'],2)}"
     pass # Remove this line and code your function
 
 if __name__ == "__main__":
